@@ -34,20 +34,20 @@ public class cineMain {
             switch (botonMenu) {
             case 1:
             	System.out.println(cine.dibujarCine());
+            	System.out.println("La cantidad total de asientos ocupados es " + cine.getTotalButacasOcupadas()+ "\n");
                 break;
             case 2:
             	if(cine.ReservarDeAUno()) {
             		
             		System.out.println("La reserva fue exitosa, dibujando mapa de asientos.");
             		System.out.println(cine.dibujarCine());
+            		System.out.println("La cantidad total de asientos ocupados es " + cine.getTotalButacasOcupadas() + "\n");
             	}
             	else {
             		
             		System.out.println("La reserva no puedo ser completada, te cabieron los asientos.");
             		
             	}
-            	
-            	
             	
             	
                 break;
@@ -58,11 +58,13 @@ public class cineMain {
             		
             		System.out.println("Transaccion completada");
             		System.out.println(cine.dibujarCine());
+            		System.out.println("La cantidad total de asientos ocupados es " + cine.getTotalButacasOcupadas()+ "\n");
             	}
             	else {
             		
             		System.out.println("no hay");
             		System.out.println(cine.dibujarCine());
+            		System.out.println("La cantidad total de asientos ocupados es " + cine.getTotalButacasOcupadas()+ "\n");
             	}
             	break;
             	

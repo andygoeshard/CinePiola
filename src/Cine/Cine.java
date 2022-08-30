@@ -53,6 +53,24 @@ public class Cine {
 		return false;
 
 	}
+	
+	public boolean ResevarDeAUnoElijiendo(String columna, Integer fila){
+		
+		Integer pasarANumero = Integer.parseInt(columna);
+		
+		if(!asientos[fila][pasarANumero].getEstaOcupado()) {
+			
+			asientos[fila][pasarANumero].setEstaOcupado(true);
+			return true;
+		}
+		
+		else {
+			
+			return false;
+			
+		}
+		
+	}
 
 	public void settearDibujo() {
 
@@ -76,19 +94,28 @@ public class Cine {
 
 	public String dibujarCine() {
 
-		String mensaje = "";
+		String mensaje = "  A B C D E F G H I J\n";
 
 		int i = 0, j = 0;
+		int iAux = 0;
 
 		for (i = 0; i < ButacasDibujo.length; i++) {
-
-			mensaje += "\n";
+			iAux = i+1;
+			mensaje += "\n" + iAux + " ";
 
 			for (j = 0; j < ButacasDibujo.length; j++) {
 
 				mensaje += "" + ButacasDibujo[i][j] + "|";
+				
+				if(i==9 && j==9) {
+					
+					mensaje += "\n";
+					
+				}
 
 			}
+			
+			
 
 		}
 		return mensaje;
@@ -99,7 +126,7 @@ public class Cine {
 		return totalButacasOcupadas;
 	}
 	
-	public boolean reservaDeAMuchos(int numeroDeAsientos) {
+	public boolean reservaDeAMuchos(Integer numeroDeAsientos) {
 		
 		int i = 0, j = 0, cantidadAsientosConsecutivos = 0;
 		String guardarIJ[];
