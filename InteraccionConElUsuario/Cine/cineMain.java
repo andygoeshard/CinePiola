@@ -16,7 +16,7 @@ public class cineMain {
         do {
 
             System.out.println("///////////////////////////////");
-            System.out.println("/////// CINE CIUDADELA ////////");
+            System.out.println("/////// CINE moron ////////");
             System.out.println("///////////////////////////////");
             System.out.println("\n");
             System.out.println("**");
